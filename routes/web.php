@@ -1,16 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', 'ChannelController@getChannels');
+Route::get('/user_channels/{id}', 'ChannelController@getUserChannels')->where('id', '[0-9]+');
+Route::get('/subscribe/{channelId}', 'ChannelController@subscribeToChannel')->where('channelId', '[0-9]+');
+Route::get('/unsubscribe/{channelId}', 'ChannelController@unsubscribeToChannel')->where('channelId', '[0-9]+');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/subscribers', 'SubscribeController@subscribers');
+//Route::get('/my_subscription', 'SubscribeController@subscribers');
+
+// Authentication routes...
+Auth::routes();
+
+Route::get('/profile', 'ProfileController@index');

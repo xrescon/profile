@@ -11,19 +11,14 @@
                     <div class="caption font-purple-plum">
                         <i class="icon-speech font-purple-plum"></i>
                         <span class="caption-subject bold uppercase"> {{ $channel->title }}</span>
-                        <span class="caption-helper">Author: {{ $channel->user_name }}</span>
                     </div>
                     <div class="actions">
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-cloud-upload"></i>
-                        </a>
                         <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
                             <i class="icon-wrench"></i>
                         </a>
                         <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
                             <i class="icon-trash"></i>
                         </a>
-                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title=""> </a>
                     </div>
                 </div>
                 <div class="portlet-body">
